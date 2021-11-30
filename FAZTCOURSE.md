@@ -58,3 +58,9 @@ net localgroup docker-users lramirez /add
 2. generar imagen: docker build -t lexfer/website . **[nombre user de dockerhub/nombre imagen]**
 3. docker login (colocar nombre de user y contrasena)
 4. subir imagen: docker push lexfer/website
+
+#### docker login
+
+* El siguiente paso es preparar la imagen para que tenga el formato correcto y sea aceptada dentro de este registro.==> nombre_de_usuario/nombre_del_repositorio:etiqueta
+* docker tag [nombre-img-a-modificar] [user-dockerhub]/[nombre-img-a-modificar]:1.0
+* docker push [user-dockerhub]/[nombre-img-a-modificar]:1.0
