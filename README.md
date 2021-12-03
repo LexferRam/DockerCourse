@@ -26,6 +26,7 @@
 * docker run -d/-it(solo para react) --name [name container] -p 3333:3333 [image name] **(el flag -p permite mapear los puertos, que es el proceso de redireccionar el puerto 3333 del pc al puerto 3333 del contenedor, de esta forma cada vez que se llame al puerto 3333 del pc se estara llamando al 3333 del contenedor)**
 * docker run -d/-it(solo para react) -e ENV=development --name [name container] -p 3333:3333 [image name] **-e ENV=development es la forma en la que se  pasa variables de entorno**
 * docker ps --format="ID\t{{.ID}}\nNombre:\t{{.Names}}" **para imprimir con un formato**
+* docker rm $(docker ps -a -f status=exited -q) ==> Elimina todos los contenedores
 
 ---
 
