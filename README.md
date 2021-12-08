@@ -27,6 +27,8 @@
 * docker run -d/-it(solo para react) -e ENV=development --name [name container] -p 3333:3333 [image name] **-e ENV=development es la forma en la que se  pasa variables de entorno**
 * docker ps --format="ID\t{{.ID}}\nNombre:\t{{.Names}}" **para imprimir con un formato**
 * docker rm $(docker ps -a -f status=exited -q) ==> Elimina todos los contenedores
+* docker rmi $(docker images -q) ==> Eliminar todas las imágenes de docker
+* docker rm $(docker ps -a -q) ==> Eliminar todos los contenedores de docker
 
 ---
 
