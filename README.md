@@ -29,6 +29,7 @@
 * docker rm $(docker ps -a -f status=exited -q) ==> Elimina todos los contenedores
 * docker rmi $(docker images -q) ==> Eliminar todas las imágenes de docker
 * docker rm $(docker ps -a -q) ==> Eliminar todos los contenedores de docker
+* docker logs [id]/ docker logs -f [id] ==> ver logs de un contenedor
 
 ---
 
