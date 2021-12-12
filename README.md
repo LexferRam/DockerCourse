@@ -31,6 +31,7 @@
 * docker rm $(docker ps -a -q) ==> Eliminar todos los contenedores de docker
 * docker logs [id]/ docker logs -f [id] ==> ver logs de un contenedor
 * docker ps -a | grep [npmbre-images] ==> lista detalle de una imagen especifica
+* docker exec -it [id-contenedor] /bin/sh ==> ver contenido del container, al estar dentro ejecutar env para ver variables de entorno
 
 ---
 
