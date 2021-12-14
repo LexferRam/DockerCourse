@@ -1,3 +1,13 @@
+## DEFINITIONS
+
+1. **Docker** es un proyecto de código abierto que automatiza el despliegue de aplicaciones dentro de contenedores de software, proporcionando una capa adicional de abstracción y automatización de virtualización de aplicaciones en múltiples sistemas operativos.​ 
+
+2. **Dockerfile**: is a text file that contains the instructions needed to create a new container image.a cada instruccion del dockerfile se le llama "layer" o capa, y cada vez que se inicia un FROM se le llama un stage los cuales se le deben asignar un alias con "as"
+
+3. **Image**: Una imagen de docker empaqueta la aplicacion y el entorno requerido por la aplicacion para ejecutarse.yml
+
+4. **Contenedor**: es una instancia en ejecucion de la immagen
+
 ## INSTALACION DE DOCKER
 
 1. linux y Mac
