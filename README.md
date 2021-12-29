@@ -74,15 +74,6 @@ Para solventar este problema debemos mapear el working directory de nuestra app 
 
 # Instalar Docker Compose
 
-1. sudo curl -L "https://github.com/docker/compose/releases/download/1.26.0/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
-2. sudo chmod +x /usr/local/bin/docker-compose
-3. docker-compose --version
-
-# EJECUTAR DOCKER-COMPOSE
-
-1. docker-compose up
-2. docker-compose down
-
 **Docker Compose**
 
 Compose is a tool for defining and running multi-container Docker applications. With Compose, you use a YAML file to configure your application's services.
@@ -112,7 +103,19 @@ services:
     volumes:
       - './server:/usr/app'
       - '/usr/app/node_modules'
+    #PASAR variables de entorno con .env
+    env_file:
+      - ./.env
 ```
+
+1. sudo curl -L "https://github.com/docker/compose/releases/download/1.26.0/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+2. sudo chmod +x /usr/local/bin/docker-compose
+3. docker-compose --version
+
+# EJECUTAR DOCKER-COMPOSE
+
+1. docker-compose up
+2. docker-compose down
 
 # Verificar todos los puerto que estan siendo usados en tu pc: **sudo lsof -nP | grep LISTEN**
 # Detener servicio que esta ocupando cierto puerto: **sudo systemctl stop apache2[<== este es el nombre del servicio "apache2"]**
