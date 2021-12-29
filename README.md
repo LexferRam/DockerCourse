@@ -83,6 +83,37 @@ Para solventar este problema debemos mapear el working directory de nuestra app 
 1. docker-compose up
 2. docker-compose down
 
+**Docker Compose**
+
+Compose is a tool for defining and running multi-container Docker applications. With Compose, you use a YAML file to configure your application's services.
+Ejemplo ejecutando multiples contenedores de docker con docker compose(revisar ejemplo carpeta "Multiple_containers"):
+
+```yml
+version: "3.8"
+services:
+  nb-client:
+    build:
+      context: ./client
+      dockerfile: Dockerfile
+    container_name: client-dc
+    ports: 
+      - 3001:3000
+    volumes:
+      - './client:/app'
+      - '/app/node_modules'
+
+  nba-server:
+    build:
+      context: ./server
+      dockerfile: Dockerfile
+    container_name: server-dc
+    ports:
+      - 5000:5000
+    volumes:
+      - './server:/usr/app'
+      - '/usr/app/node_modules'
+```
+
 # Verificar todos los puerto que estan siendo usados en tu pc: **sudo lsof -nP | grep LISTEN**
 # Detener servicio que esta ocupando cierto puerto: **sudo systemctl stop apache2[<== este es el nombre del servicio "apache2"]**
 
